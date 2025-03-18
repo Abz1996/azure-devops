@@ -3,16 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger: none
-# - main
+trigger: none  # Uncomment and set to "main" or another branch if needed
 
-pool: kubernetes-self-hosted-agent
+pool:
+  name: kubernetes-self-hosted-agent  # Ensure the correct agent pool name
 
 steps:
-- script: echo Hello, world!
+- script: echo "Hello, world!"
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    echo "Add other tasks to build, test, and deploy your project."
+    echo "See https://aka.ms/yaml"
   displayName: 'Run a multi-line script'
